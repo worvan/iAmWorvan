@@ -1,2 +1,0 @@
-# iAmWorvan
-Learning shit
