@@ -1,4 +1,4 @@
-package sea;
+package Sea.Fish;
 
 import org.w3c.dom.ls.LSOutput;
 

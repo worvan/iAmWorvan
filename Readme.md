@@ -7,6 +7,8 @@
 ### Imports
 - Import Foo.* does not include stuff from packages which are in Foo
 - Import static imports only static attributes/methods
-
 ### Readme.md syntax
 - https://www.markdownguide.org/basic-syntax/
+### Data types
+- primitives are value data types, Object stores a reference (boolean contains value, Boolean contains reference)
+- 
