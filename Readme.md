@@ -1,5 +1,7 @@
 # OCP Course Part 1
 
+course progress: 2.12
+
 ## What I learned
 ### Hello world
 - psvm and sout abbreviations are useful
@@ -11,4 +13,7 @@
 - https://www.markdownguide.org/basic-syntax/
 ### Data types
 - primitives are value data types, Object stores a reference (boolean contains value, Boolean contains reference)
-- 
+- local variables are not initialized
+- primitive cannot be null
+### Scopes
+- NestedFishHorde.cs you can run static block before constructor is executed
