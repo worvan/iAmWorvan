@@ -1,6 +1,6 @@
 # OCP Course Part 1
 
-course progress: 3.12
+course progress: 3.18
 
 ## What I learned
 ### Hello world
@@ -16,4 +16,7 @@ course progress: 3.12
 - local variables are not initialized
 - primitive cannot be null
 ### Scopes
-- NestedFishHorde.cs you can run static block before constructor is executed
+- NestedFishHorde.java you can run static block before constructor is executed
+###Var
+- Available since Java 10
+- VarFish.java
