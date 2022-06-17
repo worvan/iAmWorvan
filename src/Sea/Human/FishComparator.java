@@ -2,7 +2,7 @@ package Sea.Human;
 
 import Sea.Fish.SimpleFish;
 
-public class FishCompare {
+public class FishComparator {
 
     public static void main(String[] args) {
         SimpleFish[] fishPool = new SimpleFish[5];

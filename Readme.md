@@ -21,5 +21,5 @@ course progress: 3.18
 - Available since Java 10
 - VarFish.java
 ###Strings
-- StringFish.java, FishCompare.java
+- StringFish.java, FishComparator.java
 - should look at stringBuffer
