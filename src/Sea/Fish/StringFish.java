@@ -26,12 +26,20 @@ public class StringFish {
         var smallFish = new SmallStringFish();
         String toStringExample;
         //toStringExample = smallFish; //doesn't call toString
-        // toStringExample = String.valueOf(smallFish); //this does
+        toStringExample = String.valueOf(smallFish); //this does
         toStringExample = "" + smallFish; //and this also does
 
         System.out.println("Summoning fish! And?... "+toStringExample);
 
-        String fishcountConcat = num + num + " aand " + num + num; //eval left to right, int + string -> string
+        String fishcountConcat = num + num + " vs " + num + num; //eval left to right, int + string -> string
         System.out.println(fishcountConcat);
+
+        fishcountConcat = String.valueOf(num + num);
+        fishcountConcat += num + num;
+        System.out.println("same wrong approach as before "+fishcountConcat);
+
+        fishcountConcat = num + num + " you can use brackets and sum will be correct " + (num + num);
+        System.out.println(fishcountConcat);
+
     }
 }

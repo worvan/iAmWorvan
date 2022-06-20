@@ -1,6 +1,6 @@
 # OCP Course Part 1
 
-course progress: 3.18
+course progress: 3.20
 
 ## What I learned
 ### Hello world
