@@ -4,9 +4,16 @@ public class NestedFishHorde {
 
     private void doBlackMagic() {
         class BlackMagicFish {
-            private BlackMagicFish() {}
-            static class NestedBlackMagic {} //Guy teaching this says it is not possibruuu... wtf? 2.19
+            private BlackMagicFish() {
+                NestedBlackMagic nbm = new NestedBlackMagic();
+            }
+            static class NestedBlackMagic {
+                private NestedBlackMagic() {
+                    System.out.println("Tis fucking workin mate");
+                }
+            } //Guy teaching this says it is not possibruuu... wtf? 2.19
         }
+        BlackMagicFish blackMagicFish = new BlackMagicFish();
     }
 
     public static void main(String[] args) {
