@@ -2,6 +2,13 @@ package Sea.Fish;
 
 public class NestedFishHorde {
 
+    private void doBlackMagic() {
+        class BlackMagicFish {
+            private BlackMagicFish() {}
+            static class NestedBlackMagic {} //Guy teaching this says it is not possibruuu... wtf? 2.19
+        }
+    }
+
     public static void main(String[] args) {
         int i = 0;
         class LocalFish {
@@ -26,5 +33,8 @@ public class NestedFishHorde {
         } else if(hordeSize >= 10 ) { System.out.println("could be a bigger horde");
         } else if(hordeSize >= 30 ) { System.out.println("nice haul this year");
         } else if(hordeSize >= 45 ) { System.out.println("who is going to eat all of those!"); }
+
+        NestedFishHorde nf = new NestedFishHorde();
+        nf.doBlackMagic();
     }
 }

@@ -17,6 +17,5 @@ public class FishComparator {
 
         System.out.println( fishPool[0] == fishPool[1] ); //looks at hashCode/address, which is different
         System.out.println( fishPool[0].equals(fishPool[1]) ); //compares fishName
-
     }
 }

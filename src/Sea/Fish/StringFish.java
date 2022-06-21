@@ -1,7 +1,6 @@
 package Sea.Fish;
 
 public class StringFish {
-    //TODO Equals, intern(), concat, charsets
 
     static class SmallStringFish {
         public String toString() {
