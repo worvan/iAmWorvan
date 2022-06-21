@@ -15,7 +15,7 @@ course progress: 3.20
 - primitives are value data types, Object stores a reference (boolean contains value, Boolean contains reference)
 - local variables are not initialized
 - primitive cannot be null
-### Scopes
+###Scopes
 - NestedFishHorde.java you can run static block before constructor is executed
 ###Var
 - Available since Java 10
