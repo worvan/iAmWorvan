@@ -1,19 +1,22 @@
 package Sea.Fish;
 
 public class NestedFishHorde {
-
-    private void doBlackMagic() {
+    String blackMagicCurseSuffix = "Miraculous!";
+    private void doBlackMagic(NestedFishHorde nfh) {
         class BlackMagicFish {
-            private BlackMagicFish() {
-                NestedBlackMagic nbm = new NestedBlackMagic();
+            private BlackMagicFish(NestedFishHorde nfh) {
+                NestedBlackMagic nbm = new NestedBlackMagic( nfh);
             }
             static class NestedBlackMagic {
-                private NestedBlackMagic() {
-                    System.out.println("Tis fucking workin mate");
+                String blackMagicCurse = "Poof!";
+                private NestedBlackMagic(NestedFishHorde nfh) {
+                    System.out.println(blackMagicCurse + " " + nfh.blackMagicCurseSuffix);
                 }
-            } //Guy teaching this says it is not possibruuu... wtf? 2.19
+            }
         }
-        BlackMagicFish blackMagicFish = new BlackMagicFish();
+        BlackMagicFish blackMagicFish = new BlackMagicFish(nfh);
+
+
     }
 
     public static void main(String[] args) {
@@ -42,6 +45,6 @@ public class NestedFishHorde {
         } else if(hordeSize >= 45 ) { System.out.println("who is going to eat all of those!"); }
 
         NestedFishHorde nf = new NestedFishHorde();
-        nf.doBlackMagic();
+        nf.doBlackMagic(nf);
     }
 }

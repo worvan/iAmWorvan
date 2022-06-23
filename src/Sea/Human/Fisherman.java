@@ -17,8 +17,4 @@ public class Fisherman {
         System.out.println(greeting);
         System.out.println("I already hooked " + hookedFishCount + "\n I know it ain't much, but it's honest work");
     }
-
-    public static void main(String[] args) {
-
-    }
 }
