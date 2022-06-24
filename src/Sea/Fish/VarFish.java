@@ -3,8 +3,9 @@ package Sea.Fish;
 import java.util.ArrayList;
 
 public class VarFish {
-    //var huhu = "hehe"; No no no, class cannot variable cannot be var
-    public static void main(String[] args) {
+    //var huhu = "hehe"; No no no, class cannot variable cannot be declared as var
+
+    void varSchowcase() {
         var varGreeting = "Do you want to protect yourself, or deal some damage"; //can do this since Java 10
         var var = new Object(); //haha, var is not reserved keyword
 
@@ -27,5 +28,24 @@ public class VarFish {
             j += 1; // haha, could do lVList.size(), but wanted to try out vars
         }
         System.out.println(j+" greetings in the list");
+    }
+
+    void fishVarCalc() {
+        var result = 0;
+        var i = 100;
+        var f = 0.06f;
+        var d = 0.05;
+
+        var r0 = i*d;
+        result = i + (int) r0;
+        System.out.println("calc result: "+ result);
+    }
+
+    public static void main(String[] args) {
+        var vf = new VarFish();
+
+        vf.varSchowcase();
+
+        vf.fishVarCalc();
     }
 }

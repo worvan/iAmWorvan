@@ -8,7 +8,7 @@ public class StringFish {
         }
     }
 
-    public static void main(String[] args) {
+    static void staticDemo() {
         final String fishInput = "Whale, Pollock, Carp, Swordfish";
         final String nullFish = null;
 
@@ -39,6 +39,24 @@ public class StringFish {
 
         fishcountConcat = num + num + " you can use brackets and sum will be correct " + (num + num);
         System.out.println(fishcountConcat);
+    }
+
+    void stringBuilderDemo() {
+        String fishInput = "Whale, Pollock, Carp, Swordfish";
+        String whiteSpaceFish = " ";
+
+        boolean fishPresence = !whiteSpaceFish.isEmpty();
+        boolean isJustWhitespace = whiteSpaceFish.isBlank();
+
+        System.out.println("is the fish there? " + fishPresence + "\nIs the fish blank? "+ isJustWhitespace );
+
+    }
+
+    public static void main(String[] args) {
+        //StringFish.staticDemo();
+        var sf = new StringFish();
+
+        sf.stringBuilderDemo();
 
     }
 }
