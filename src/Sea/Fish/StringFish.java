@@ -42,7 +42,6 @@ public class StringFish {
     }
 
     void stringBuilderDemo() {
-        String fishInput = "Whale, Pollock, Carp, Swordfish";
         String whiteSpaceFish = " ";
 
         boolean fishPresence = !whiteSpaceFish.isEmpty();
@@ -52,11 +51,45 @@ public class StringFish {
 
     }
 
+    void searchDemo(String pattern) {
+        final String fishInput = "Whale, Pollock, Carp, Swordfish";
+        String resultMsg = "No fish like that found";
+
+//        var toFind = "Pollock";
+        var toFind = pattern;
+
+        int foundIndex = fishInput.lastIndexOf(toFind);
+        if (foundIndex > -1) {
+            resultMsg = "found "+toFind+" on index: "+foundIndex;
+        }
+        System.out.println(resultMsg);
+    }
+
+    void joinDemo() {
+        final String fishInput = "Whale, Pollock, Carp, Swordfish";
+        String resultMsg = "Types of fish I do have now: ";
+
+        resultMsg = resultMsg.join(" ", resultMsg, fishInput);
+        System.out.println(resultMsg);
+    }
+
+    void trimStripDemo() {
+        final String fishInput = " \n \t    Whale, Pollock, Carp, Swordfish          ";
+        String resultMsg;
+        resultMsg = fishInput.trim();
+        System.out.println("trim: "+ resultMsg); //cuts of everything lower than U+0020
+
+        resultMsg = fishInput.strip();
+        System.out.println("strip (preffered): "+ resultMsg); //better definition of whitespace
+    }
+
     public static void main(String[] args) {
         //StringFish.staticDemo();
         var sf = new StringFish();
 
-        sf.stringBuilderDemo();
-
+        //sf.stringBuilderDemo();
+        //sf.searchDemo("Carp");
+        //sf.joinDemo();
+        sf.trimStripDemo();
     }
 }
