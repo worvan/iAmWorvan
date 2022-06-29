@@ -41,7 +41,7 @@ public class StringFish {
         System.out.println(fishcountConcat);
     }
 
-    void stringBuilderDemo() {
+    void stringSimpleConcatDemo() {
         String whiteSpaceFish = " ";
 
         boolean fishPresence = !whiteSpaceFish.isEmpty();
@@ -74,22 +74,39 @@ public class StringFish {
     }
 
     void trimStripDemo() {
-        final String fishInput = " \n \t    Whale, Pollock, Carp, Swordfish          ";
+        final String fishInput = " \n \tWhale, Pollock, Carp, Swordfish          ";
         String resultMsg;
         resultMsg = fishInput.trim();
         System.out.println("trim: "+ resultMsg); //cuts of everything lower than U+0020
 
         resultMsg = fishInput.strip();
-        System.out.println("strip (preffered): "+ resultMsg); //better definition of whitespace
+        System.out.println("strip (preffered): "+ resultMsg); //character.isWhitespace: tried stuff like \u00A0 but it does not trim... it's a scam :D
+    }
+
+    void stringBuilderDemo() {
+        final String fishInput = "Whale, Pollock, Carp, Swordfish";
+        StringBuilder sb = new StringBuilder(fishInput);
+        StringBuilder sb2 = new StringBuilder(fishInput);
+
+        System.out.println("sb==sb2 "+ (sb==sb2));
+        System.out.println("sb.equals(sb2) "+ sb.equals(sb2));
+        System.out.println("sb.compareTo(sb2) "+ sb.compareTo(sb2));
+        System.out.println("sb.toString() == sb2.toString() "+ (sb.toString() == sb2.toString()));
+        System.out.println("sb.toString().equals(sb2.toString()) "+ sb.toString().equals(sb2.toString()));
+
+        //sb2.getChars(0,5,new char[5], 0);
+
+
     }
 
     public static void main(String[] args) {
         //StringFish.staticDemo();
         var sf = new StringFish();
 
-        //sf.stringBuilderDemo();
+        //sf.stringSimpleConcatDemo();
         //sf.searchDemo("Carp");
         //sf.joinDemo();
-        sf.trimStripDemo();
+        //sf.trimStripDemo();
+        sf.stringBuilderDemo();
     }
 }
