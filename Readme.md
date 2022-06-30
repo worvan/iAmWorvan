@@ -1,6 +1,6 @@
 # OCP Course
 
-course progress: 1.4.36
+course progress: 1.4.40
 
 ## What I learned
 ### Hello world
@@ -23,3 +23,6 @@ course progress: 1.4.36
 ### Strings
 - StringFish.java, FishComparator.java
 - should look at stringBuffer
+### Operators
+- OperatorCarp.java
+- --a vs a--
