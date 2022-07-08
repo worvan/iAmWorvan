@@ -11,6 +11,7 @@ public class OperatorCarp {
     }
 
     public void modulusDemo() {
+        short a = 10, b = 5;
         int i = 63, j = 5;
         float f = 10.0f, g = 3.0f;
 
@@ -18,6 +19,8 @@ public class OperatorCarp {
         System.out.println( f +" Mod "+ g + " = "+ f%g);
         //System.out.println( i +" Mod "+ 0 + " = "+ f%0);//throws exception
         System.out.println( f +" Mod "+ 0.0f + " = "+ f%0.0f);
+        var e = a % b; //TODO % promotes automatically to integer, idk why even when doing short%short
+        System.out.println("short "+a+" Mod short"+b+" = "+a%b+" (int)");
     }
 
     public void shiftDemo() {
@@ -32,12 +35,49 @@ public class OperatorCarp {
         );
     }
 
+    public void ternaryDemo() {
+        boolean a = true;
+        boolean b = false;
+
+        String msg = a ? "I am True carp" : "I am False carp";
+        System.out.println("A: "+msg);
+
+        String msg2 = b ? "I am True carp" : "I am False carp"; //only statements allowed
+        System.out.println("B: "+msg2);
+
+        //a ? System.out.println() : System.out.println(); //not expressions
+    }
+
+    public void operatorPriorityDemo() {
+        short a = 10;
+        short b = 5;
+        char c = 3;
+
+        var d = a *= b -= c--;
+        System.out.println("eval: "+d);
+
+
+        int i = 0;//stolen from quiz
+        int j = 5;
+        int k = 10;
+
+        int loopIterations = 0;
+        while ((i++ < j) || (j < --k)) {
+            loopIterations++;
+        }
+        System.out.println("loops: "+loopIterations);
+
+    }
+
 
     public static void main(String[] args) {
         OperatorCarp oc = new OperatorCarp();
 
         //oc.incrementDemo();
         //oc.modulusDemo();
-        oc.shiftDemo();
+        //oc.shiftDemo();
+        //oc.ternaryDemo();
+        oc.operatorPriorityDemo();
+
     }
 }
