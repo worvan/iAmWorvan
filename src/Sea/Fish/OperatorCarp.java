@@ -78,6 +78,5 @@ public class OperatorCarp {
         //oc.shiftDemo();
         //oc.ternaryDemo();
         oc.operatorPriorityDemo();
-
     }
 }
