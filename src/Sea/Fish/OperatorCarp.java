@@ -66,7 +66,14 @@ public class OperatorCarp {
             loopIterations++;
         }
         System.out.println("loops: "+loopIterations);
+    }
 
+    public void condicionalDemo() {
+        boolean a = false, b = false, c = false;
+        //a && b gets resolved and is true, so what is after OR gets skipped
+        if(( a=true ) && (b = true) || (c = true)) {
+            System.out.println("a:" + a + "\nb:" + b + "\nc:" + c);
+        }
     }
 
 
@@ -77,6 +84,7 @@ public class OperatorCarp {
         //oc.modulusDemo();
         //oc.shiftDemo();
         //oc.ternaryDemo();
-        oc.operatorPriorityDemo();
+        //oc.operatorPriorityDemo();
+        oc.condicionalDemo();
     }
 }
